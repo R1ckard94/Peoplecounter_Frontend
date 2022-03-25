@@ -2,7 +2,7 @@
 .container {
   top: 0;
   left: 0;
-  background-color: #322659;
+  background-color: white;
 }
 
 .main {
@@ -20,7 +20,7 @@
   margin-bottom: -10%;
   display: flex;
   justify-content: center;
-  color: white;
+  color: blueviolet;
 }
 
 .footer {
