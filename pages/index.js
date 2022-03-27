@@ -1,17 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Container } from '@chakra-ui/layout'
 
 
 
 
 export default function Home() {
   return (
-    <div classname='mainHolder'>
-      <div className={styles.sidePanel}>
+    <Container>
+      <Container className={styles.sidePanel}>
 
-      </div>
-      <div className={styles.container}>
+      </Container>
+      <Container className={styles.container}>
         <header>
           <title>People Counter</title>
         </header>
@@ -19,9 +20,9 @@ export default function Home() {
 
         <main className={styles.main}>
 
-          <div className={styles.card}>
+          <Container className={styles.card}>
 
-          </div>
+          </Container>
           <div className={styles.card}>
 
           </div>
@@ -32,7 +33,8 @@ export default function Home() {
 
           </a>
         </footer>
-      </div>
-    </div>
+      </Container>
+
+    </Container>
   )
 }
