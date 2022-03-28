@@ -19,17 +19,17 @@ export default function Home() {
 
       <Flex paddingBottom='2.5rem'>
         <VStack w='100px' marginTop='5%'>
-            <Button size='lg' color='blueviolet'>History</Button>
+            <Button size='lg' color='blueviolet'>Historik</Button>
         </VStack>
         <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' justifyContent='center' alignItems='center'>
 
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'>14</Heading>
-            <Text color='whiteAlpha.700' textAlign='center'>Current amount in office</Text>
+            <Text color='whiteAlpha.700' textAlign='center'>Antal människor på kontoret</Text>
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'>24</Heading>
-            <Text color='whiteAlpha.700' textAlign='center'>Highest amount for the day</Text>
+            <Text color='whiteAlpha.700' textAlign='center'>Högsta antal på kontoret samtidigt</Text>
           </Box>
         </Flex>
 
