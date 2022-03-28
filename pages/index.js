@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Container, Flex, VStack, Heading } from '@chakra-ui/layout'
+import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup, Box } from '@chakra-ui/react'
 
 
@@ -28,13 +28,15 @@ export default function Home() {
         <VStack w='100px' marginTop='5%'>
             <Button size='lg' color='blueviolet'>History</Button>
         </VStack>
-        <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex'  className={styles.main}>
+        <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' gap={100} className={styles.main}>
 
-          <Box className={styles.card}>
-
+          <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
+            <Heading color='blueviolet' textAlign='center'>14</Heading>
+            <Text color='whiteAlpha.700' textAlign='center'>Current amount in office</Text>
           </Box>
-          <Box className={styles.card}>
-
+          <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
+            <Heading color='blueviolet' textAlign='center'>24</Heading>
+            <Text color='whiteAlpha.700' textAlign='center'>Highest amount for the day</Text>
           </Box>
         </Flex>
 
