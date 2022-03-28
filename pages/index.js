@@ -1,40 +1,50 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Container } from '@chakra-ui/layout'
+import { Container, Flex, VStack, Heading } from '@chakra-ui/layout'
+import { Button, ButtonGroup, Box } from '@chakra-ui/react'
 
 
 
 
 export default function Home() {
   return (
-    <Container>
-      <Container className={styles.sidePanel}>
-
-      </Container>
-      <Container className={styles.container}>
-        <header>
+    <Container maxW='contaner.xl' p='5'>
+      <header>
           <title>People Counter</title>
-        </header>
-        <h1 className={styles.MainText} >People Counter på Atea!</h1>
+      </header>
+      <Flex h='10vh' > 
+      <VStack w='full' h='full' p={10} spacing={10} alignItems='center' >
+          <Heading color='blueviolet' 
+            fontSize='8vh' 
+            fontWeight='600' 
+            m='-3%'
+            >People Counter på Atea
+          </Heading>
+      </VStack>
+      </Flex>
 
-        <main className={styles.main}>
+      <Flex>
+        <VStack w='100px' marginTop='5%'>
+            <Button size='lg' color='blueviolet'>History</Button>
+        </VStack>
+        <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex'  className={styles.main}>
 
-          <Container className={styles.card}>
+          <Box className={styles.card}>
 
-          </Container>
-          <div className={styles.card}>
+          </Box>
+          <Box className={styles.card}>
 
-          </div>
-        </main>
+          </Box>
+        </Flex>
 
-        <footer className={styles.footer}>
+        
+      </Flex>
+      <footer className={styles.footer}>
           <a>
 
           </a>
         </footer>
-      </Container>
-
     </Container>
   )
 }

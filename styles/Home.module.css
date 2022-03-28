@@ -1,12 +1,28 @@
 
-.container {
-  top: 0;
-  left: 0;
-  background-color: white;
+.sidePanel {
+  background-color: #eaeaea;
+  /*margin-left: 0%;*/
+  width: 10px;
+}
+.Header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.Content {
+  height: 90vh;
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  max-width: 100vh;
 }
 
 .main {
-  min-height: 100vh;
+  min-height: 70vh;
+
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -16,11 +32,9 @@
 }
 
 .MainText {
-  padding-top: 5%;
-  margin-bottom: -10%;
-  display: flex;
-  justify-content: center;
   color: blueviolet;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .footer {
