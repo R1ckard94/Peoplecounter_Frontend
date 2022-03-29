@@ -1,4 +1,3 @@
-
 import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup, Box } from '@chakra-ui/react'
 import Link from 'next/link'
