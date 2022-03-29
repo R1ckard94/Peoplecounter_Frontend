@@ -1,7 +1,7 @@
-import Image from 'next/image'
+
 import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup, Box } from '@chakra-ui/react'
-
+import Link from 'next/link'
 
 
 
@@ -19,7 +19,9 @@ export default function Home() {
 
       <Flex paddingBottom='2.5rem'>
         <VStack w='100px' marginTop='5%'>
+          <Link href='/history'>
             <Button size='lg' color='blueviolet'>Historik</Button>
+          </Link>
         </VStack>
         <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' justifyContent='center' alignItems='center'>
 
