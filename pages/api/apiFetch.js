@@ -28,8 +28,7 @@ const ApiFetch = (props) => {
                 {gotIt.map( tasks =>
                     {if (tasks.id == props.id) {
                         return(
-                        <li key={tasks.id}>
-                            Id = {props.id}: <br/>
+                        <li key={tasks.id}>                            
                             Title: {tasks.title} - <span>( {tasks.completed ? 'Completed' : 'Not Completed'} )</span>
                         </li>
                         )
