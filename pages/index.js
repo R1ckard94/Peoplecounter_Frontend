@@ -1,6 +1,7 @@
 import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup, Box } from '@chakra-ui/react'
 import Link from 'next/link'
+import ApiFetch from './api/apiFetch'
 
 
 
@@ -33,8 +34,7 @@ export default function Home() {
             <Text color='whiteAlpha.700' textAlign='center'>Högsta antal på kontoret samtidigt</Text>
           </Box>
         </Flex>
-
-        
+        <ApiFetch/>
       </Flex>
       <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid white' position='absolute' bottom='0'/>
     </Container>
