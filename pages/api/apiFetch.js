@@ -2,7 +2,7 @@ import { Container } from '@chakra-ui/layout'
 import { useState, useEffect } from 'react';
 
 
-const ApiFetch = () => {
+const ApiFetch = (props) => {
     const [ gotIt, setGotIt ] = useState()
     const [ isLoading, setIsLoading ] = useState(false)
 
@@ -24,13 +24,13 @@ const ApiFetch = () => {
     }
     return (
     <Container>
-        <h1>TODO List</h1>
             <ul>
                 {gotIt.map( tasks =>
-                    {if (tasks.userId == 1) {
+                    {if (tasks.id == props.id) {
                         return(
                         <li key={tasks.id}>
-                            {tasks.title} - <span>( {tasks.completed ? 'Completed' : 'Not Completed'} )</span>
+                            Id = {props.id}: <br/>
+                            Title: {tasks.title} - <span>( {tasks.completed ? 'Completed' : 'Not Completed'} )</span>
                         </li>
                         )
                     }}

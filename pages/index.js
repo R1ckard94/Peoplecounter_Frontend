@@ -34,7 +34,13 @@ export default function Home() {
             <Text color='whiteAlpha.700' textAlign='center'>Högsta antal på kontoret samtidigt</Text>
           </Box>
         </Flex>
-        <ApiFetch/>
+        <div>
+        <h1>Id = 5</h1>
+        <ApiFetch id={5}/>
+        <br></br>
+        <h1>Id = 10</h1>
+        <ApiFetch id={10}/>
+        </div>
       </Flex>
       <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid white' position='absolute' bottom='0'/>
     </Container>
