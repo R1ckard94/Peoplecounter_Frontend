@@ -1,5 +1,6 @@
 import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup, Box } from '@chakra-ui/react'
+import Timer from './api/hello.js'
 import Link from 'next/link'
 import ApiFetch from './api/apiFetch'
 
@@ -26,7 +27,7 @@ export default function Home() {
         <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' justifyContent='center' alignItems='center'>
 
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
-            <Heading color='blueviolet' textAlign='center'>14</Heading>
+            <Heading color='blueviolet' textAlign='center'><Timer/></Heading>
             <Text color='whiteAlpha.700' textAlign='center'>Antal människor på kontoret</Text>
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
