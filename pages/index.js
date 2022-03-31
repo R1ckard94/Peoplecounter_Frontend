@@ -26,7 +26,7 @@ export default function Home() {
         <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' justifyContent='center' alignItems='center'>
 
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
-            <Heading color='blueviolet' textAlign='center'><ApiFetch id={1}/></Heading>
+            <Heading color='blueviolet' textAlign='center'>22</Heading>
             <Text color='whiteAlpha.700' textAlign='center'>Antal människor på kontoret</Text>
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
