@@ -6,7 +6,12 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const ApiFetch = (props) => {
     //swr-function that provides us with a quick variant to the useEffect version and fetches the api once 
-    const { data, error } = useSwr('https://jsonplaceholder.typicode.com/todos/', fetcher)
+    const { data, error } = useSwr( 
+                                'https://jsonplaceholder.typicode.com/todos/', 
+                                fetcher, 
+                                { //fetches api every 20seconds
+                                    refreshInterval: 20000 
+                                })
 
     //error handling when api is down or the connection is broken
     if (error) return <div>Failed to load from api</div>
