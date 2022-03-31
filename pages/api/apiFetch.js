@@ -1,31 +1,20 @@
 import { Container } from '@chakra-ui/layout'
-import { useState, useEffect } from 'react';
+import useSwr from 'swr'
 
+//fetch variable that fetches the data and converts to json
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const ApiFetch = (props) => {
-    const [ gotIt, setGotIt ] = useState()
-    const [ isLoading, setIsLoading ] = useState(false)
+    //swr-function that provides us with a quick variant to the useEffect version and fetches the api once 
+    const { data, error } = useSwr('https://jsonplaceholder.typicode.com/todos/', fetcher)
 
-    useEffect(() => {
-        setIsLoading(true)
-        fetch('https://jsonplaceholder.typicode.com/todos/')
-            .then(response => response.json())
-            .then(data => {
-                
-                setGotIt(data)
-                setIsLoading(false)
-            })
-    }, [])
-    if(isLoading){
-        return <p>Loading...</p>
-    }
-    if(!gotIt){
-        return <p>No info to show</p>
-    }
+    //error handling when api is down or the connection is broken
+    if (error) return <div>Failed to load from api</div>
+    if (!data || data.map == null) return <div>Loading...</div>
     return (
     <Container>
             <ul>
-                {gotIt.map( tasks =>
+                {data.map(tasks =>
                     {if (tasks.id == props.id) {
                         return(
                         <li key={tasks.id}>                            
