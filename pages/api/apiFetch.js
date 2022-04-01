@@ -9,7 +9,7 @@ const ApiFetch = (props) => {
     const { data, error } = useSwr( 
                                 'https://localhost:5001/api/1.0/Count', 
                                 fetcher, 
-                                { //fetches api every 20seconds
+                                { //fetches api every 30seconds
                                     refreshInterval: 30000 
                                 })
 
@@ -23,7 +23,7 @@ const ApiFetch = (props) => {
                     {
                         return(
                         <li >                            
-                            Title: {FormData.id} - <p>{FormData.date}, <br/> curr: {FormData.current}, <br/> Max: {FormData.maxAmount}, <br/> )</p>
+                            Title: {FormData.id.id} - <p>{FormData.date}, <br/> curr: {FormData.current}, <br/> Max: {FormData.maxAmount}, <br/> )</p>
                         </li>
                         )
                     }
