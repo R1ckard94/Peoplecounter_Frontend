@@ -39,7 +39,7 @@ export default function Home() {
         <ApiFetch id={5}/>
         <br></br>
         <h1>Id = 10</h1>
-        <ApiFetch id={10}/>
+        <ApiFetch id={10}/> 
         </div>
       </Flex>
       <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid white' position='absolute' bottom='0'/>

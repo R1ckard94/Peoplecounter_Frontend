@@ -7,10 +7,10 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 const ApiFetch = (props) => {
     //swr-function that provides us with a quick variant to the useEffect version and fetches the api once 
     const { data, error } = useSwr( 
-                                'https://localhost:5001/api/1.0/weatherforecast', 
+                                'https://localhost:5001/api/1.0/Count', 
                                 fetcher, 
                                 { //fetches api every 20seconds
-                                    refreshInterval: 20000 
+                                    refreshInterval: 30000 
                                 })
 
     //error handling when api is down or the connection is broken
@@ -23,7 +23,7 @@ const ApiFetch = (props) => {
                     {
                         return(
                         <li >                            
-                            Title: {FormData.date} - <p>{FormData.date}, <br/> temp: {FormData.temperatureC}, <br/> sum: {FormData.summary}, <br/> )</p>
+                            Title: {FormData.id} - <p>{FormData.date}, <br/> curr: {FormData.current}, <br/> Max: {FormData.maxAmount}, <br/> )</p>
                         </li>
                         )
                     }
