@@ -2,7 +2,16 @@ import { Container, Heading } from '@chakra-ui/layout'
 import { useState, useEffect } from 'react'
 import useSwr from 'swr'
 
-//fetch variable that fetches the data and converts to json
+const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+        "Id": 1, //does work to remove this however keeps pushing everytime it gets refreshed
+        "Date":"130 mars 2022",
+        "CurrAmount": 20,
+        "MaxAmount": 30 })
+};
+//fetch variable that fetches the data and converts to json, reqestOptions to change between GET, POST, DELETE, PUT
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 const ApiFetch = (props) => {
@@ -16,7 +25,7 @@ const ApiFetch = (props) => {
     */
 
     const { data, error } = useSwr( 
-        'https://localhost:5001/api/1.0/Count', 
+        'https://localhost:5001/api/countday', 
         fetcher, 
         { //fetches api every 30seconds
             refreshInterval: 30000 
@@ -30,7 +39,7 @@ const ApiFetch = (props) => {
                 {data.map(FormData =>
                     {if (FormData.id == props.id)
                         return(
-                            <a>{FormData.current}</a>
+                            <a>{FormData.currAmount}</a>
                         
                         )
                     }
