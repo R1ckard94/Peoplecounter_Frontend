@@ -25,7 +25,7 @@ const ApiFetch = (props) => {
     */
 
     const { data, error } = useSwr( 
-        'https://localhost:5001/api/counted', 
+        'https://localhost:5001/api/counted',   //https://peoplecounterapi.azurewebsites.net/api/counted
         fetcher, 
         { //fetches api every 30seconds
             refreshInterval: 30000 

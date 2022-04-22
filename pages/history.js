@@ -6,7 +6,7 @@ function History(){
   return (
     <Container>
         <Heading>
-            Historik
+            Historiksidan måste fixas!
         </Heading>
         <Link href='/'>
             <Button>Back to main</Button>
