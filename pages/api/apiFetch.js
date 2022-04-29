@@ -25,7 +25,7 @@ const ApiFetch = (props) => {
     */
 
     const { data, error } = useSwr( 
-        'https://localhost:5001/api/counted',   //https://peoplecounterapi.azurewebsites.net/api/counted
+        'https://peoplecounterapi.azurewebsites.net/api/counted/' + currdate,   
         fetcher, 
         { //fetches api every 30seconds
             refreshInterval: 30000 
@@ -36,8 +36,8 @@ const ApiFetch = (props) => {
     return (
     <Container>
             
-                {data.map(FormData =>
-                    {if (FormData.id == props.id)
+                {data.map(FormData => //ändra så att det visas antal för dagen +1 -1 utan att det blir -1
+                    {if (FormData.date_and_time == props.date)
                         return(
                             <a>{FormData.currAmount}</a>
                         
