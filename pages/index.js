@@ -26,21 +26,14 @@ export default function Home() {
         <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' justifyContent='center' alignItems='center'>
 
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
-            <Heading color='blueviolet' textAlign='center'><ApiFetch id={1}/></Heading>
+            <Heading color='blueviolet' textAlign='center'><ApiFetch id={"current"}/></Heading>
             <Text color='whiteAlpha.700' textAlign='center'>Antal människor på kontoret</Text>
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
-            <Heading color='blueviolet' textAlign='center'>24</Heading>
+            <Heading color='blueviolet' textAlign='center'><ApiFetch id={"max"}/></Heading>
             <Text color='whiteAlpha.700' textAlign='center'>Högsta antal på kontoret samtidigt</Text>
           </Box>
         </Flex>
-        <div>
-        <h1>Id = 5</h1>
-        <ApiFetch id={1}/>
-        <br></br>
-        <h1>Id = 10</h1>
-        <ApiFetch id={2}/>
-        </div>
       </Flex>
       <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid white' position='absolute' bottom='0'/>
     </Container>
