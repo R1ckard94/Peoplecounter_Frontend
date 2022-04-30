@@ -27,11 +27,11 @@ export default function Home() {
 
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"current"}/></Heading>
-            <Text color='blackAlpha.800' textAlign='center'>Antal människor på kontoret</Text>
+            <Text color='blackAlpha.800' fontWeight='bold' textAlign='center'>Antal människor på kontoret</Text>
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"max"}/></Heading>
-            <Text color='blackAlpha.800' textAlign='center'>Högsta antal på kontoret för dagen</Text>
+            <Text color='blackAlpha.800' fontWeight='bold' textAlign='center'>Högsta antal på kontoret för dagen</Text>
           </Box>
         </Flex>
       </Flex>
