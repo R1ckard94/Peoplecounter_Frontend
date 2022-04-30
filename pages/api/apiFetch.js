@@ -7,7 +7,7 @@ const requestOptions = {
     headers: { 'Content-Type': 'application/json' }
 };
 //fetch variable that fetches the data and converts to json, reqestOptions to change between GET, POST, DELETE, PUT
-const fetcher = (...args) => fetch(...args, {mode: 'no-cors'}).then((res) => res.json())
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 
 
