@@ -26,7 +26,8 @@ const ApiFetch = (props) => {
         date = `${current.getFullYear()}-0${current.getMonth()+1}-${current.getDate()}`
     }
     const { data, error } = useSwr( 
-        '/api/counted/' + date + '/peoplecount',   
+        //'https://peoplecounterapi.azurewebsites.net/api/counted/' + date + '/peoplecount',   
+        'https://peoplecounterapi.azurewebsites.net/api/counted/2022-04-28/peoplecount', 
         fetcher, 
         { //fetches api every 30seconds
             refreshInterval: 30000 
