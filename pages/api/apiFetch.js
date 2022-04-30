@@ -7,7 +7,7 @@ const requestOptions = {
     headers: { 'Content-Type': 'application/json' }
 };
 //fetch variable that fetches the data and converts to json, reqestOptions to change between GET, POST, DELETE, PUT
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
+const fetcher = (...args) => fetch(...args, {mode: 'no-cors'}).then((res) => res.json())
 
 
 
@@ -26,7 +26,7 @@ const ApiFetch = (props) => {
         date = `${current.getFullYear()}-0${current.getMonth()+1}-${current.getDate()}`
     }
     const { data, error } = useSwr( 
-        'https://peoplecounterapi.azurewebsites.net/api/counted/' + date + '/peoplecount',   
+        '/api/counted/' + date + '/peoplecount',   
         fetcher, 
         { //fetches api every 30seconds
             refreshInterval: 30000 
