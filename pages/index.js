@@ -31,7 +31,7 @@ export default function Home() {
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"max"}/></Heading>
-            <Text color='whiteAlpha.700' textAlign='center'>Högsta antal på kontoret samtidigt</Text>
+            <Text color='whiteAlpha.700' textAlign='center'>Högsta antal på kontoret för dagen</Text>
           </Box>
         </Flex>
       </Flex>

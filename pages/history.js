@@ -6,8 +6,9 @@ function History(){
   return (
     <Container>
         <Heading>
-            Historiksidan måste fixas!
+            Under development...
         </Heading>
+        <br/>
         <Link href='/'>
             <Button>Back to main</Button>
         </Link>
