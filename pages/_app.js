@@ -1,5 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
-
+import '../styles/Calendar.css'
+import '../styles/globals.css'
 
 
 
