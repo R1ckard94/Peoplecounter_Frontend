@@ -23,13 +23,13 @@ export default function Home() {
       <Flex paddingBottom='2.5rem'>
         <Flex w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' marginTop='20' alignItems='center'>
 
-          <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
+          <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600' boxShadow='0 12px 20px rgba(0, 0, 0, 0.2)'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"current"}/></Heading>
-            <Text color='blackAlpha.800' fontWeight='bold' textAlign='center'>Antal människor på kontoret</Text>
+            <Text fontWeight='bold' textAlign='center'>Antal människor på kontoret</Text>
           </Box>
-          <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
+          <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600' boxShadow='0 12px 20px rgba(0, 0, 0, 0.2)'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"max"}/></Heading>
-            <Text color='blackAlpha.800' fontWeight='bold' textAlign='center'>Inpasseringar</Text>
+            <Text fontWeight='bold' textAlign='center'>Inpasseringar</Text>
           </Box>
         </Flex>
       </Flex>

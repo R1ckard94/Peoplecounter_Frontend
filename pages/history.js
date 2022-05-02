@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Box } from '@chakra-ui/react'
+import { Button, ButtonGroup, Box, background } from '@chakra-ui/react'
 import { useState, useEffect } from 'react';
 import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import Calendar from 'react-calendar/dist/umd/Calendar'
@@ -31,10 +31,34 @@ function History(){
         <Link href='/'>
             <Button size='lg' color='blueviolet' m='4% 0% 0% 1.5%' boxShadow='0 5px 12px rgba(0, 0, 0, 0.2)'>Startsida</Button>
         </Link>
-        <Container minH='100%' minW='100vh' marginTop='-2%' >
+        <Container minH='100%' minW='100vh' marginTop='-2%' textAlign='center'>
           <Heading textAlign='center' color='blueviolet' fontSize='8vh' fontWeight='600' marginTop='-10%'>Historik</Heading>
           <Calendar onChange={setDate} value={date} selectRange={false}/>
-          {date.length > 0 ? (
+          <Button 
+            m='3%'
+            onClick={Fetch} 
+            size='lg'  
+            color='whiteAlpha.900' 
+            bg='purple.800' 
+            boxShadow='0 5px 12px rgba(0, 0, 0, 0.2)' 
+            sx={{  '&:hover': {backgroundColor: 'blackAlpha.500'} }}>
+              Hämta data för vald dag
+          </Button>
+          {elementPreview}
+        </Container>
+        <Container>
+          
+        </Container>
+
+    </body>
+  )
+}
+
+export default History
+
+//text för att hämta ut range mellan två datum 
+/**
+ * {date.length > 0 ? (
         <p >
           <span className='bold'>Start:</span>{' '}
           {date[0].toDateString()}
@@ -47,15 +71,4 @@ function History(){
           {date.toDateString()}
         </p>
       )}
-          
-        </Container>
-        <Container>
-          <Button onClick={Fetch} size='lg' color='blueviolet' bg='blackAlpha.600' boxShadow='0 5px 12px rgba(0, 0, 0, 0.2)'>Hämta data för vald dag</Button>
-          {elementPreview}
-        </Container>
-
-    </body>
-  )
-}
-
-export default History
+ */
