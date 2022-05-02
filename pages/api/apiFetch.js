@@ -25,6 +25,9 @@ const ApiFetch = (props) => {
     if(date.length == 9){
         date = `${current.getFullYear()}-0${current.getMonth()+1}-${current.getDate()}`
     }
+    if(date.length == 8){
+        date = `${current.getFullYear()}-0${current.getMonth()+1}-0${current.getDate()}`
+    }
     const { data, error } = useSwr( 
         'https://peoplecounterapi.azurewebsites.net/api/counted/' + date + '/peoplecount',   
         fetcher, 
