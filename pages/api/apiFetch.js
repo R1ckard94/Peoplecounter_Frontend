@@ -2,10 +2,7 @@ import { Container, Heading } from '@chakra-ui/layout'
 import { useState, useEffect } from 'react'
 import useSwr from 'swr'
 
-const requestOptions = {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' }
-};
+
 //fetch variable that fetches the data and converts to json, reqestOptions to change between GET, POST, DELETE, PUT
 const fetcher = (...args) => fetch(...args, {mode: 'cors', headers:{'Access-Control-Allow-Origin':'*'}}).then((res) => res.json())
 

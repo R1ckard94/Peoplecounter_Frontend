@@ -13,17 +13,15 @@ export default function Home() {
       </header>
       <Flex h='10vh' > 
         <VStack w='full' h='full' p={10} spacing={10} alignItems='center' >
-            <Heading color='blueviolet' fontSize='8vh' fontWeight='600' m='-3%'>People Counter på Atea</Heading>
+          <Heading color='blueviolet' fontSize='8vh' fontWeight='600' m='-3%'>People Counter på Atea</Heading>
         </VStack>
       </Flex>
+      <Link href='/history' >
+        <Button marginTop='-20' size='lg' color='blueviolet' boxShadow='0 5px 12px rgba(0, 0, 0, 0.2)'>Historik</Button>
+      </Link>
 
       <Flex paddingBottom='2.5rem'>
-        <VStack w='100px' marginTop='5%'>
-          <Link href='/history'>
-            <Button size='lg' color='blueviolet'>Historik</Button>
-          </Link>
-        </VStack>
-        <Flex alignSelf='center' w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' justifyContent='center' alignItems='center'>
+        <Flex w='200vh' maxW='200vh' display='flex' direction='column' gap={100} minH='70vh' marginTop='20' alignItems='center'>
 
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"current"}/></Heading>
@@ -31,7 +29,7 @@ export default function Home() {
           </Box>
           <Box p={10} maxW='sm' borderRadius='lg' borderWidth='1px' overflow='hidden' borderColor='blue.600'>
             <Heading color='blueviolet' textAlign='center'><ApiFetch id={"max"}/></Heading>
-            <Text color='blackAlpha.800' fontWeight='bold' textAlign='center'>Högsta antal på kontoret för dagen</Text>
+            <Text color='blackAlpha.800' fontWeight='bold' textAlign='center'>Inpasseringar</Text>
           </Box>
         </Flex>
       </Flex>
