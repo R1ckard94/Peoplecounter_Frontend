@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import Calendar from 'react-calendar/dist/umd/Calendar'
 import Link from 'next/link'
+import Charts from './chart';
 
 
 
@@ -19,14 +20,17 @@ function History(){
   useEffect(() => {
     if(text !== ""){
       const textFunc = (
-        <p>{text} :: Här ligger cool text</p> //här lägger vi fetchen till api som kommer displaya cool data
+        <Container paddingBottom='5%'>
+          <Text fontWeight='bold'>{text}</Text> 
+          <Charts date={date}/>
+        </Container>
       )
       setElementPreview(textFunc)
     }
   },[text])
 
   return (
-    <body>
+    <Container maxW='auto' minH='100vh' p='2%'>
 
         <Link href='/'>
             <Button size='lg' color='blueviolet' m='4% 0% 0% 1.5%' boxShadow='0 5px 12px rgba(0, 0, 0, 0.2)'>Startsida</Button>
@@ -45,12 +49,11 @@ function History(){
               Hämta data för vald dag
           </Button>
           {elementPreview}
-        </Container>
-        <Container>
           
         </Container>
+        <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid black' position='absolute' bottom='0'/>
 
-    </body>
+    </Container>
   )
 }
 

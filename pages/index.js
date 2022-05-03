@@ -33,7 +33,7 @@ export default function Home() {
           </Box>
         </Flex>
       </Flex>
-      <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid white' position='absolute' bottom='0'/>
+      <VStack w='calc(100% - 4%)' height='2.5rem' borderTop='1px solid black' position='absolute' bottom='0'/>
     </Container>
   )
 }

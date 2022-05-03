@@ -43,19 +43,3 @@ const ApiFetch = (props) => {
 }
 
 export default ApiFetch
-
-/**
- * <li id={FormData.id}>                            
-                            Title: {FormData.id} - <p>{FormData.date}, <br/> curr: {FormData.current}, <br/> Max: {FormData.maxAmount}, <br/> )</p>
-                        </li>
- * const { data, error } = useSwr( 
-                                'https://localhost:5001/api/1.0/Count', 
-                                fetcher, 
-                                { //fetches api every 30seconds
-                                    refreshInterval: 30000 
-                                })
-
-    //error handling when api is down or the connection is broken
-    if (error) return <div>Failed to load from api</div>
-    if (!data || data.map == null) return <div>Loading...</div>
- */
