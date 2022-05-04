@@ -1,5 +1,4 @@
 import { Container, Heading } from '@chakra-ui/layout'
-import { useState, useEffect } from 'react'
 import useSwr from 'swr'
 
 
