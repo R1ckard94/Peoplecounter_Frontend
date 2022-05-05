@@ -4,6 +4,7 @@ import { Container, Flex, VStack, Heading, Text } from '@chakra-ui/layout'
 import Calendar from 'react-calendar/dist/umd/Calendar'
 import Link from 'next/link'
 import Charts from './chart';
+import moment from 'moment';
 
 
 
@@ -15,15 +16,12 @@ function History(){
   const [elementPreview, setElementPreview] = useState(null);
 
   const Fetch = () => {
-    let dateTextNice = date.toDateString()
-    let dateString = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
-    if(dateString.length == 9)
-        dateString = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
-    if(dateString.length == 8)
-        dateString = `${date.getFullYear()}-0${date.getMonth()+1}-0${date.getDate()}`
+    const dateTextNice = moment(date).format("LL")
+    const dateString = moment(date).format("YYYY-MM-DD")
     setText(dateString)
     setNiceDateText(dateTextNice)
   }
+  
   useEffect(() => {
     if(text !== ""){
       const textFunc = (
