@@ -11,18 +11,25 @@ import Charts from './chart';
 function History(){
   const [date, setDate] = useState(new Date())
   const [text, setText] = useState("")
+  const [niceDateText, setNiceDateText] = useState("")
   const [elementPreview, setElementPreview] = useState(null);
 
   const Fetch = () => {
-    let dateText = date.toDateString()
-    setText(dateText)
+    let dateTextNice = date.toDateString()
+    let dateString = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+    if(dateString.length == 9)
+        dateString = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
+    if(dateString.length == 8)
+        dateString = `${date.getFullYear()}-0${date.getMonth()+1}-0${date.getDate()}`
+    setText(dateString)
+    setNiceDateText(dateTextNice)
   }
   useEffect(() => {
     if(text !== ""){
       const textFunc = (
         <Container paddingBottom='5%'>
-          <Text fontWeight='bold'>{text}</Text> 
-          <Charts date={date}/>
+          <Text fontWeight='bold'>{niceDateText}</Text> 
+          <Charts date={text}/>
         </Container>
       )
       setElementPreview(textFunc)

@@ -4,15 +4,10 @@ import useSwr from 'swr'
 const fetcher = (...args) => fetch(...args, {mode: 'cors', headers:{'Access-Control-Allow-Origin':'*'}}).then((res) => res.json())
 
 function Charts (props) {
-    var current = new Date()
-    current = props.date //ger error vid build återkom, kanske skicka färdig string ifrån history.js
-    var dateString = `${current.getFullYear()}-${current.getMonth()+1}-${current.getDate()}`
-    if(dateString.length == 9)
-        dateString = `${current.getFullYear()}-0${current.getMonth()+1}-${current.getDate()}`
-    if(dateString.length == 8)
-        dateString = `${current.getFullYear()}-0${current.getMonth()+1}-0${current.getDate()}`
+
+    
     const { data, error } = useSwr(
-        'https://peoplecounterapi.azurewebsites.net/api/counted/' + dateString + '/details',   
+        'https://peoplecounterapi.azurewebsites.net/api/counted/' + props.date + '/details',   
         fetcher
     )
     
