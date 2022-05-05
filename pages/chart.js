@@ -45,7 +45,13 @@ function Charts (props) {
             legend:{
               display:true,
               position:'right'
+            },
+            scales: {
+              y: {
+                suggestedMax: 10
+              }
             }
+            
         }}
     />
     )
