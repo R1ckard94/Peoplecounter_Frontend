@@ -34,26 +34,29 @@ function Charts (props) {
         }      
     } 
     return (
-    <Bar
-        data={state}
-        options={{
-            title:{
-              display:true,
-              text:'People Per Hour',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'right'
-            },
-            scales: {
-              y: {
-                suggestedMax: 10
-              }
-            }
-            
-        }}
-    />
+      <div>
+        <Bar
+            data={state}
+            options={{
+                title:{
+                  display:true,
+                  text:'People Per Hour',
+                  fontSize:20
+                },
+                legend:{
+                  display:true,
+                  position:'right'
+                },
+                scales: {
+                  y: {
+                    suggestedMax: 10
+                  }
+                }
+
+            }}
+        />
+        <p>Tiden i en spalt täcker för hela timmen (HH:00-HH:59)</p>
+      </div>
     )
 
  
